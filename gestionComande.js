@@ -8,7 +8,9 @@ export class Customer {
   }
 
   destroyCustomer() {
-    console.log(`Customer: ${this.name}, ${this.email} has been deleted`);
+    this.name = null;
+    this.email = null;
+    console.log(`Customer has been deleted`);
   }
 
   editCustomer(newCustomer) {
@@ -18,7 +20,7 @@ export class Customer {
   }
   getCustomer() {
     console.log(`Customer: ${this.name}, ${this.email}`);
-    return { name: this.name };
+    return { name: this.name, email: this.email };
   }
 }
 
@@ -33,7 +35,10 @@ export class Product {
   }
 
   destroyProduct() {
-    console.log(`Product: ${this.name} has been deleted`);
+    this.name = null;
+    this.quantity = null;
+    this.price = null;
+    console.log(`Product has been deleted`);
   }
 
   editProduct(newProduct) {
